@@ -1,0 +1,96 @@
+# Site-level host catalogue.  This info feeds the Templater
+# kustomize plugin config in the hostgenerator-m3 function.
+
+## NEWSITE_CHANGED: update the whole file with the site specific host details
+apiVersion: airshipit.org/v1alpha1
+kind: VariableCatalogue
+metadata:
+  name: host-catalogue
+  labels:
+    airshipit.org/deploy-k8s: "false"
+
+hosts:
+  # NEWSITE_CHANGED: update with the site specific host details for all hosts
+  m3:
+    bm129:
+      bootMode: legacy
+      macAddress: 24:6e:96:7c:fa:1c
+      bmcAddress: redfish+https://10.2.0.129/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.226
+        pxe-ipv4: 172.63.0.11
+        storage-ipv4: 172.62.0.29
+        calico-ipv4: 172.64.0.29
+      hardwareProfile: default # defined in the hostgenerator-m3 function
+    bm130:
+      bootMode: legacy
+      macAddress: 24:6e:96:7b:f0:8c
+      bmcAddress: redfish+https://10.2.0.130/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.227
+        pxe-ipv4: 172.63.0.12
+        storage-ipv4: 172.62.0.30
+        calico-ipv4: 172.64.0.30
+      hardwareProfile: default # defined in the hardwareprofile-example function
+    bm131:
+      bootMode: legacy
+      #macAddress: E4:43:4B:EE:D7:B8
+      macAddress: 24:6e:96:7b:ea:dc
+      bmcAddress: redfish+https://10.2.0.131/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.228
+        pxe-ipv4: 172.63.0.13
+        storage-ipv4: 172.62.0.31
+        calico-ipv4: 172.64.0.31
+      hardwareProfile: default # defined in the hardwareprofile-example function
+    bm132:
+      bootMode: legacy
+      #macAddress: E4:43:4B:EE:D7:B8
+      macAddress: 24:6e:96:7d:07:3c
+      bmcAddress: redfish+https://10.2.0.132/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.229
+        pxe-ipv4: 172.63.0.14
+        storage-ipv4: 172.62.0.32
+        calico-ipv4: 172.64.0.32
+      hardwareProfile: default # defined in the hardwareprofile-example function
+    bm133:
+      bootMode: legacy
+      #macAddress: E4:43:4B:EE:D7:B8
+      macAddress: 24:6e:96:7b:ea:5c
+      bmcAddress: redfish+https://10.2.0.133/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.230
+        pxe-ipv4: 172.63.0.15
+        storage-ipv4: 172.62.0.33
+        calico-ipv4: 172.64.0.33
+      hardwareProfile: default # defined in the hardwareprofile-example function
+    bm134:
+      bootMode: legacy
+      #macAddress: E4:43:4B:EE:D7:B8
+      macAddress: 24:6e:96:7c:f8:bc
+      bmcAddress: redfish+https://10.2.0.134/redfish/v1/Systems/System.Embedded.1
+      bmcUsername: admin
+      bmcPassword: ericsson
+      disableCertificateVerification: true
+      ipAddresses:
+        oam-ipv4: 10.254.125.231
+        pxe-ipv4: 172.63.0.16
+        storage-ipv4: 172.62.0.34
+        calico-ipv4: 172.64.0.34
+      hardwareProfile: default # defined in the hardwareprofile-example function
